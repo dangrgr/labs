@@ -2,7 +2,7 @@
 
 Easy and fun lab! 
 
-I follwoed the Amazon ECS developer guides here: 
+I followed the Amazon ECS developer guides here: 
 - Creating a container image: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-container-image.html
 - Creating ECS fargate using a container image: https://docs.aws.amazon.com/AmazonECS/latest/developerguide/getting-started-fargate.html 
 
