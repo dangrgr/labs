@@ -1,0 +1,38 @@
+{
+    "family": "hello-world-fargate",
+    "containerDefinitions": [
+        {
+            "name": "hello-world-app",
+            "image": "564772533787.dkr.ecr.us-east-1.amazonaws.com/hello-repository:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "name": "hello-world-app-80-tcp",
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/hello-world-fargate",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "executionRoleArn": "arn:aws:iam::564772533787:role/AmazonECSTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
+}
